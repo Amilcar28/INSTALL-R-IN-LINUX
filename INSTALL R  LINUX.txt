@@ -1,0 +1,36 @@
+Installed older version Rstudio 2.15.2 in WSL Ubuntu
+
+1 - Ubtunu(Debian-based) system, Installing from package manager
+sudo apt update
+sudo apt install r-base
+
+sudo apt build-dep r-base
+
+2 - Ubuntu(Debian-based) system, Installing from source :
+
+wget http://cran.rstudio.com/src/base/R-2/R-2.15.2.tar.gz
+
+Extraction file tar.gz
+ 
+tar xvf R-2.15.2.tar.gz
+cd R-2.15.2.tar.gz
+
+./configure --prefix=$HOME/R
+make && make install
+
+Check the R version
+
+R.version.string
+
+REMOVE R
+
+sudo apt-get remove r-base-core
+
+
+Install R studio in Ubuntu 05/06/2024
+
+sudo apt update
+sudo apt -y install r-base gdebi-core
+cd Downloads
+sudo gdebi rstudio-2021.09.0-351-amd64.deb
+                     ^^^^^change this filename to the one you downloaded!
